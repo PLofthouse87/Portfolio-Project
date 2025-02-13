@@ -1,0 +1,12 @@
+body{
+    color: green;
+    background-color: black;
+    font-family: Verdana;
+}
+
+button{
+    background-color: green;
+    color: black;
+    width: 200px;
+    height: 75px;
+}
