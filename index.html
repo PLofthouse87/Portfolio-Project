@@ -6,15 +6,18 @@
     <title>Lofthouse Design Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
 </head>
 <body class="bg-primary-subtle">
     
-  <h1 class="siteLogo text-center m-2">Lofthouse Design Portfolio</h1>
+  <h1 class="siteLogo text-center m-2 abril-fatface-regular">Lofthouse Design Portfolio</h1>
 
   <nav class="navbar navbar-expand-lg bg-secondary bg-opacity-50">
     <div class="container-fluid">
-      <a class="siteLogo navbar-brand" href="Index.html">Lofthouse Design</a>
+      <a class="siteLogo abril-fatface-regular navbar-brand" href="Index.html">Lofthouse Design</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -46,12 +49,25 @@
     </div>
   </nav>
 
-  <h3 class="text-center mt-5">A selection of my work</h3>
+  <div class="container text-center">
+    <div class="row align-items-start">
+      <div class="col">
+        <h2 class="mt-5 mx-2">Welcome to my portfolio!</h2>
+      </div>
+      <div class="col">
+        <img class="container mt-5 mx-2" src="cookie-the-pom-gySMaocSdqs-unsplash.jpg" height="auto" width="300px" alt="A picture of a dog wearing glasses looking at a an apple tablet propped up on a stand">
+      </div>
+    </div>
+  </div>
+
+  <p class="m-2 lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique leo in eleifend aliquam. Maecenas scelerisque id sem at dapibus. Pellentesque feugiat nunc nec massa aliquet ullamcorper. Aenean in rutrum nisl. Donec lectus ipsum, viverra et consectetur non, elementum a urna. Mauris et nibh pulvinar, tempus risus nec, fringilla magna. Donec eget ex sed erat fringilla blandit. Curabitur et dolor ut libero porttitor semper vel at nisl. Praesent mollis dignissim purus, volutpat pellentesque ex tincidunt in. Curabitur id elit sit amet justo aliquam tincidunt feugiat vehicula ipsum. Etiam ultricies, ligula non sollicitudin vestibulum, mi velit vestibulum ipsum, nec efficitur elit ante auctor quam. Maecenas mattis eros ut felis auctor, et efficitur neque blandit. Ut sed orci tincidunt, malesuada risus eget, sodales mauris. Duis magna dolor, rhoncus vitae dolor sit amet, accumsan porttitor purus.</p>
+  
+  <h3 class="text-center mt-3">A selection of my work</h3>
 
   <div class="accordion mt-2" id="websiteAccord">
-    <div class="accordion-item">
+    <div class="accordion-item bg-primary-subtle">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="accordion-button bg-secondary bg-opacity-50" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Sample Webpage 1
         </button>
       </h2>
@@ -61,9 +77,9 @@
         </div>
       </div>
     </div>
-    <div class="accordion-item">
+    <div class="accordion-item bg-primary-subtle">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="accordion-button collapsed bg-secondary bg-opacity-50" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           Sample Webpage 2
         </button>
       </h2>
@@ -73,10 +89,10 @@
         </div>
       </div>
     </div>
-    <div class="accordion-item">
+    <div class="accordion-item bg-primary-subtle">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Accordion Item #3
+        <button class="accordion-button collapsed bg-secondary bg-opacity-50" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Sample Webpage 3
         </button>
       </h2>
       <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#websiteAccord">
