@@ -52,30 +52,46 @@
         <form
         action="https://formspree.io/f/movjnddv"
         method="POST"
-        class="d-inline-flex flex-column justify-content-center"
+        class=""
         >
-            <div class="py-2">
+            <div class="mb-3">
+              <label class="">
+                  First Name:
+              </label>
+              <br>
+              <input type="text" name="text" required> 
+            </div>
+        
+            <div class="mb-3">
+              <label class="">
+                  Last Name:
+              </label>
+              <br>
+              <input type="text" name="text" required> 
+            </div>
+
+            <div class="mb-3">
                 <label class="">
                     Your email:
                 </label>
                 <br>
-                <input type="email" name="email" required> 
+                <input type="email" name="email" required placeholder="name@email.com"> 
             </div>
-            <div class="py-2">
+            <div class="mb-3">
                 <label class="">
                 
                     Your phone number (optional):
                 </label>
                 <br>
-                    <input type="tel" name="tel" pattern="[0-9]{5} [0-9]{6}">
+                    <input type="tel" name="tel" pattern="[0-9]{5} [0-9]{6}" placeholder="01234 567891">
             </div>
             
-            <div class="py-2">
+            <div class="mb-3">
                 <label class="">
                     Your message:
                 </label>
                 <br>
-                    <textarea name="message" required></textarea>
+                    <textarea class="form-control-lg" name="message" required></textarea>
             </div>
             <!-- your other form fields go here -->
             <button class="m-2 btn btn-secondary btn-lg" type="submit">Send</button>
