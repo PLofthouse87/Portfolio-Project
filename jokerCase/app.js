@@ -1,15 +1,29 @@
 "use strict";
-//console.log("Hello World");
+// let accent = "é"
+// console.log(accent.toUpperCase());
 
 //My inital aim is to create a function that takes in a string and converts each character that is a letter to alternate between lower and upper case, starting with lower case and returns the new string
 // The function will ignore other characters, including special letter characters such as é.
 
 
 //The first step is creating the global variable letterTest which will hold a RegExp expression for all letters of the alphabet upper and lower case.
-let letterTest = new RegExp('[a-z]', 'i');
+const letterTest = new RegExp('[a-z]', 'i');
+
+//Creating a second variable to hold the RegExp for a range of accented characters
+//I've sourced these characters from a university of Tampa web page: https://www.ut.edu/academics/college-of-arts-and-letters/department-of-languages-and-linguistics/typing-accented-characters#
+//It's a great resource but everything is comma separated so the easiest thing to is just create an aray of them all then loop them out as one big string
+const tampaList = ["à", "è", "ì", "ò", "ù", "á", "é", "í", "ó", "ú", "ý", "â", "ê", "î", "ô", "û", "ã", "ñ", "õ", "ä", "ë", "ï", "ö", "ü", "ÿ", "å", "æ", "œ", "ç", "ð", "ø", "ß"];
+//Creating the variable accLets to hold each accented letter extracted by the for loop
+let accLets = ""
+//Creating the for loop
+for (let i = 0; i < tampaList.length; i++) {
+    accLets += tampaList[i];
+}
+let charTest = '[àèìòùáéíóúýâêîôûãñõäëïöüÿåæœçðøß]'
+//Creating the variable accTest to hold the RegExp object that checks for accented characters
+const accTest = new RegExp(charTest, 'i');
 //Now the function jokerCase() will be created. It will take one argument, inString , a string
-// let justChar = "A";
-// console.log(letterTest.test(justChar));
+
 
 function jokerCase(inString) {
     //Creating the local variable jokered as an empty string
@@ -19,7 +33,7 @@ function jokerCase(inString) {
     // Creating a for in loop (with the temp variable character) to iterate through each element in the string held in inStringUp
     for (let i = 0; i < inString.length; i++) {
         //Creating an if statement to check calling the .test() method on the RegExp in letterTest with the current i element of the string in inString 
-        if (letterTest.test(inString[i])) {
+        if (letterTest.test(inString[i])||accTest.test(inString[i])) {
             // Creating a switch statement that will make the letter character lower case if oddEven is even and upper case if oddEven is odd.
             switch(oddEven % 2 === 0) {
                 case true:
