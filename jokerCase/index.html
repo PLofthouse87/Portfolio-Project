@@ -9,9 +9,13 @@
 </head>
 <body>
     <h1>Convert your text to Joker Case</h1>
-    <form>
-        <input type="text" id="preJoke">
+    <form id ="jokeForm">
+        <input type="text" name="preJoke" id="preJoke" required>
+        <input type="submit" value="Submit" id="jokerButton">
     </form>
+    <div id="jokeredText">
+        
+    </div>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
