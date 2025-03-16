@@ -50,12 +50,18 @@ let preJoke = document.forms.jokeForm.preJoke;
 //Creating the variable jokerButton to hold the HTML form submission button with the id jokerButton using the querySelector() method
 let jokerForm = document.forms.jokeForm;
 
+//Creating the variable jokeredText to hold the innerHTML of the <p> with the ID jokeredText
+let jokeredText = document.getElementById("jokeredText");
+
+
 //creating an event listener for the jokerButton variable that will activate upon submit
 jokerForm.addEventListener('submit', function(event){
     //The event will prevent the default behaviour
     event.preventDefault();
     //Printing to console the result of calling the jokerCase() function on the value (.value) held in the variable preJoke
     console.log(jokerCase(preJoke.value));
+    //Adding the string held in preJoke to the empty <p> with the ID jokeredText
+    jokeredText.innerHTML = jokerCase(preJoke.value);
     //Resetting the fields of the form
     jokerForm.reset();
 })
