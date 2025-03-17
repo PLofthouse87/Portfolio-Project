@@ -12,16 +12,18 @@ const letterTest = new RegExp('[a-z]', 'i');
 //Creating a second variable to hold the RegExp for a range of accented characters
 //I've sourced these characters from a university of Tampa web page: https://www.ut.edu/academics/college-of-arts-and-letters/department-of-languages-and-linguistics/typing-accented-characters#
 //It's a great resource but everything is comma separated so the easiest thing to is just create an aray of them all then loop them out as one big string
-const tampaList = ["à", "è", "ì", "ò", "ù", "á", "é", "í", "ó", "ú", "ý", "â", "ê", "î", "ô", "û", "ã", "ñ", "õ", "ä", "ë", "ï", "ö", "ü", "ÿ", "å", "æ", "œ", "ç", "ð", "ø", "ß"];
-//Creating the variable accLets to hold each accented letter extracted by the for loop
-let accLets = ""
-//Creating the for loop
-for (let i = 0; i < tampaList.length; i++) {
-    accLets += tampaList[i];
-}
-let charTest = '[àèìòùáéíóúýâêîôûãñõäëïöüÿåæœçðøß]'
+// const tampaList = ["à", "è", "ì", "ò", "ù", "á", "é", "í", "ó", "ú", "ý", "â", "ê", "î", "ô", "û", "ã", "ñ", "õ", "ä", "ë", "ï", "ö", "ü", "ÿ", "å", "æ", "œ", "ç", "ð", "ø", "ß"];
+// //Creating the variable accLets to hold each accented letter extracted by the for loop
+// let accLets = ""
+// //Creating the for loop
+// for (let i = 0; i < tampaList.length; i++) {
+//     accLets += tampaList[i];
+// }
+// console.log(accLets);
+// let charTest = '[àèìòùáéíóúýâêîôûãñõäëïöüÿåæœçðøß]';
 //Creating the variable accTest to hold the RegExp object that checks for accented characters
-const accTest = new RegExp(charTest, 'i');
+//So the loop doesn't need to run every time I've just pasted the result of the loop with added square brackets into the RegExp assignment
+const accTest = new RegExp('[àèìòùáéíóúýâêîôûãñõäëïöüÿåæœçðøß]', 'i');
 //Now the function jokerCase() will be created. It will take one argument, inString , a string
 
 
